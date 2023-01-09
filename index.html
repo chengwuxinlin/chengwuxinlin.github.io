@@ -104,6 +104,20 @@
 									</header>
 									<div class="posts">
 										<article>
+											<a href="#" class="image"><img src="images/SGM-PINN.png" alt="" /></a>
+											<h3>SGM-PINN</h3>
+											<p>To address the limitations of existing PINN-based PDE solvers, our latest work introduces an importance-sampling framework (SGM-PINN) to 
+												exploit the conditional dependence among the training samples by leveraging probabilistic graphical models (PGMs). Instead of training 
+												a PINN model using the full set of data samples (point cloud) during the training process that may involve millions of stochastic gradient descent (SGD) iterations, 
+												SGM-PINN allows adaptively forming much smaller epochs by only selecting the most representative data samples based on a graph-based importance sampling strategy. 
+												Our preliminary results show that SGM-PINN can achieve up to 50% faster convergence for training PINNs on several computational fluid dynamics (CFD) problems.  </p>
+											<ul class="actions">
+												<li><a href="" class="button">Paper</a></li>
+												<li><a href="https://sites.google.com/view/fenglab/selected-projects-ml" class="button">Introduction</a></li>
+											</ul>
+										</article>
+
+										<article>
 											<a href="#" class="image"><img src="images/SPADE.png" alt="" /></a>
 											<h3>SPADE(ICML 2021)</h3>
 											<p>SPADE measures adversarial robustness of an ML model by examining the bijective distance mappings between the input/output graph-based manifolds. 
