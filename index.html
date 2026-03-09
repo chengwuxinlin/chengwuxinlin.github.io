@@ -1,341 +1,154 @@
 <!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	
+<html lang="en">
 	<head>
-		<title>Wuxinlin's Personal Page</title>
+		<title>Wuxinlin Cheng | AI Researcher</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, user-scalable=no"
+		/>
+		<meta
+			name="description"
+			content="Wuxinlin Cheng is an AI researcher and engineer working on robust machine learning, graph learning, diffusion models, and generative interfaces."
+		/>
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
 	</head>
-	<body class="is-preload">
+	<body class="is-preload has-ai-theme theme-light">
+		<canvas id="neuralField" aria-hidden="true"></canvas>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
+			<div id="main">
+				<div class="inner">
+					<header class="site-header reveal" id="top">
+						<a href="#top" class="site-brand" aria-label="Wuxinlin Cheng home">
+							<span class="site-brand-mark">WC</span>
+							<span class="site-brand-copy">
+								<strong>Wuxinlin Cheng</strong>
+								<small>Theorem-driven AI for real systems</small>
+							</span>
+						</a>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+						<nav class="site-nav" aria-label="Primary">
+							<a href="#projects">Projects</a>
+							<a href="chengwuCVgithub.pdf">CV</a>
+							<a href="mailto:chengwu1230@gmail.com">Email</a>
+							<a href="https://github.com/chengwuxinlin">GitHub</a>
+							<button type="button" class="theme-toggle" id="themeToggle">Dark mode</button>
+						</nav>
+					</header>
 
-							<!-- Header -->
-								<header id="header">
-									<a href="https://github.com/chengwuxinlin" class="logo"><strong>GitHub Account</strong></a>
-									<ul class="icons">
-										<li><a href="https://www.stevens.edu/" class="fas fa-university" style='font-size:20px'><span class="label" style='font-size:14px'>SIT</span></a></li>
-										<li><a href="https://sites.google.com/view/fenglab/news?authuser=0" class="fas fa-dice-d20" style='font-size:20px' ><span class="label" style='font-size:14px'> Feng Lab</span></a></li>
-										<!--
-										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
-										-->
-									</ul>
-								</header>
+					<section class="page-section hero-section reveal">
+						<div class="hero-copy">
+							<p class="eyebrow">PhD researcher in robust AI, generative AI, and accelerated learning</p>
+							<h1>Rigorous AI for generative systems, defect detection, and accelerated learning.</h1>
+							<p class="hero-summary">
+								I build mathematically grounded AI across generative models,
+								robust defect detection, graph learning, stability analysis,
+								diffusion methods, and training acceleration for industrial and
+								research systems.
+							</p>
+							<p class="hero-note">
+								Recent highlights include a DAC 2025 Best Paper Nominee, an SPIE
+								Advanced Lithography + Patterning paper, two KLA invention
+								disclosures, and scientific advisory work across startup and
+								industrial AI programs.
+							</p>
 
-							<!-- Banner -->
-								<section id="banner">
-									<div class="content">
-										<header>
-											<h1>Wuxinlin Cheng</h1>
-											<p>Email: <a href = "mailto: wcheng7@stevens.edu">wcheng7@stevens.edu</a><br>
-											Office: 524 River St UNIT 713, Hoboken, NJ 07030</p>
-										</header>
-										<p>In 2021, I started my Ph.D. in Computer Engineering at Stevens Institute of Technology(SIT). As a member of <a href="https://sites.google.com/view/fenglab">FengLab</a>   
-										   and guided by <a href="https://faculty.stevens.edu/zfeng12">Zhuo Feng</a>, my research interests are deep learning and graph learning. Currently, my experience extends to computer vision, data analysis, natural language processing, and the robustness of deep neural networks. 
-										</p>
-										
-										<ul class="actions">
-											<li><a href="chengwuCVgithub.pdf" class="button big">CV</a></li>
-											<li id="cvLastUpdated" style="list-style-type:none; margin-top: 10px;">Last Updated: July 25, 2024</li>
-										</ul>
-										
-									</div>
-									<span class="image object">
-										<img src="images/pic10.jpg" alt="" />
-									</span>
-								</section>
+							<div class="action-row">
+								<a href="chengwuCVgithub.pdf" class="action-button action-button--primary">Open CV</a>
+								<a href="#projects" class="action-button">Browse Projects</a>
+								<a href="mailto:chengwu1230@gmail.com" class="action-button action-button--ghost">Contact</a>
+							</div>
 
-							<!-- Section
-								<section>
-									<header class="major">
-										<h2>Erat lacinia</h2>
-									</header>
-									<div class="features">
-										<article>
-											<span class="icon fa-gem"></span>
-											<div class="content">
-												<h3>Portitor ullamcorper</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-paper-plane"></span>
-											<div class="content">
-												<h3>Sapien veroeros</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-rocket"></span>
-											<div class="content">
-												<h3>Quam lorem ipsum</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-signal"></span>
-											<div class="content">
-												<h3>Sed magna finibus</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-									</div>
-								</section>
-
-							-->
-							
-
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Projects - Last Updated: December 12, 2023</h2>
-									</header>
-									<div class="posts">
-										<article>
-											<a href="#" class="image"><img src="images/SGM-PINN.png" alt="" /></a>
-											<h3>SGM-PINN</h3>
-											<p>By leveraging probabilistic graphical models (PGMs), SGM-PINN allows adaptively forming much smaller epochs by only selecting the most representative data samples based on a graph-based importance sampling strategy. 
-												Our preliminary results show that SGM-PINN can achieve up to 50% faster convergence for training PINNs on several computational fluid dynamics (CFD) problems.  </p>
-											<ul class="actions">
-												<li><a href="" class="button">Paper</a></li>
-												<li><a href="https://sites.google.com/view/fenglab/selected-projects-ml" class="button">Introduction</a></li>
-											</ul>
-										</article>
-
-										<article>
-											<a href="#" class="image"><img src="images/SPADE.png" alt="" /></a>
-											<h3>SPADE(ICML 2021)</h3>
-											<p>SPADE measures the adversarial robustness of an ML model by examining the bijective distance mappings between the input/output graph-based manifolds. 
-												Moreover, SPADE can be further used to reveal the robustness of input data, which guides downstream applications such as 
-												adversarial training. Compare with the VANILLA PGD training, SPADE can achieve up to 18% better accuracy.</p>
-											<ul class="actions">
-												<li><a href="https://arxiv.org/abs/2102.03716" class="button">Paper</a></li>
-												<li><a href="https://github.com/Feng-Research/SPADE" class="button">Code</a></li>
-											</ul>
-										</article>
-										
-										<article>
-											<a href="#" class="image"><img src="images/hair.png" alt="" /></a>
-											<h3>Hair Detection Robustness Improvement(Industrial Task)</h3>
-											<p>This work manipulates robust training and data augmentations on a tiny dataset(only 200 pictures). It enables hair detection and achieves 99.97% accuracy on the LEMA (Beijing) Technology Co., Ltd model. 
-												Moreover, test accuracy barely drops under <a href="https://arxiv.org/pdf/1807.01697.pdf">severity 5 corruption</a>, 
-												which means the reasonable perturbation(e.g., brightness difference or blur) will not affect the accuracy.</p>
-											<ul class="actions">
-												<li><a href="http://www.lemabj.com/" class="button">company website</a></li>
-											</ul>
-										</article>
-
-										<article>
-											<a href="#" class="image"><img src="images/lema.png" alt="" /></a>
-											<h3>Vial Classification Accuracy & Runtime Improvement(Industrial Task)</h3>
-											<p>This work exploits data selection, neural network pruning, and data augmentations to accelerate Vial classification while performing a 
-												better accuracy, leading to a 42% accuracy improvement and 5.8x runtime speedup over the previous model from LEMA (Beijing) 
-												Technology Co., Ltd.</p>
-											<ul class="actions">
-												<li><a href="http://www.lemabj.com/" class="button">company website</a></li>
-											</ul>
-										</article>
-
-										<article>
-											<a href="#" class="image"><img src="images/benchmark.png" alt="" /></a>
-											<h3>Benchmarking Tools(Industrial Task)</h3>
-											<p>I participated in building benchmarking tools for AI security and robustness. This project included:
-												1. Creating a multi-level vulnerability assessment to identify inherent model vulnerabilities across data, model, and system layers.
-											        2. Developing a lightweight detection for fine-grained detection of malicious samples, poisoned models, and backdoor access.
-											        3. Implementing a robust enhancement for data and algorithms, providing trustworthy protection, from data collection to decision inference.
-											        4. Constructing a security measurement with verifiable and explainable decisions.
-											</p>
-											<ul class="actions">
-												<li><a href="http://www.lemabj.com/" class="button">company website</a></li>
-											</ul>
-										</article>
-
-										<article>
-											<a href="#" class="image"><img src="images/cansat.jpg" alt="" /></a>
-											<h3>CanSat Design(Industrial Task)</h3>
-											<p>A CanSat is a type of rocket payload used to teach space technology. This work focuses on CanSat PCB design and final packaging for Shanghai ASES Spaceflight Technology Co.Ltd..</p>
-											<ul class="actions">
-												<li><a href="http://www.asesspace.com/" class="button">company website</a></li>
-											</ul>
-										</article>
-										
-										
-										<article>
-											<a href="#" class="image"><img src="images/s2d.png" alt="" /></a>
-											<h3>S2D: Sample-to-Decision-Boundary Distance</h3>
-											<p>S2D, a data robustness ranking technique, measures sample manifold distance to decision boundaries and predicts clean data robustness after perturbation. 
-												S2D significantly improves robustness evaluation with smaller dataset ranges and massively accelerates training without decreasing accuracy. 
-												Our experiments show promising empirical results for neural networks trained with the CIFAR-10 and CIFAR-100 data sets.</p>
-									                <ul class="actions">
-												<li><a href="http://www.asesspace.com/" class="button">company website</a></li> 
-											</ul> 
-										</article>
-									        
-									
-										<article>
-											<a href="#" class="image"><img src="images/SAGRAM.png" alt="" /></a>
-											<h3>SAGRAM</h3>
-											<p>SAGRAM is a black-box efficient and effective coreset selection algorithm. 
-												By exploiting Gaussian graphical models, SAGRAM significantly improves the training efficiency without compromising the accuracy of deep models.</p>
-											<ul class="actions">
-												<li><a href="" class="button">code</a></li>
-											</ul>
-										</article>
-										
-										
-										<!--
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3>Sed etiam facilis</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3>Feugiat lorem aenean</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
-											<h3>Amet varius aliquam</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										-->
-									</div>
-								</section>
-						
-
+							<div class="meta-row">
+								<div class="meta-pill">
+									<span class="meta-label">CV updated</span>
+									<strong id="cvLastUpdated">Loading...</strong>
+								</div>
+								<div class="meta-pill">
+									<span class="meta-label">Projects updated</span>
+									<strong id="projectsLastUpdated">Loading...</strong>
+								</div>
+							</div>
 						</div>
-					</div>
 
-				<!-- Sidebar 
-					<div id="sidebar">
-						<div class="inner">
+						<div class="hero-aside">
+							<div class="portrait-card">
+								<div class="portrait-orbit portrait-orbit--one" aria-hidden="true"></div>
+								<div class="portrait-orbit portrait-orbit--two" aria-hidden="true"></div>
+								<div class="portrait-grid" aria-hidden="true"></div>
+								<img src="images/pic10.jpg" alt="Portrait of Wuxinlin Cheng" />
+							</div>
 
-							<!-- Search
-								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>
-								</section>
-							-->
-
-							<!-- Menu 
-								<nav id="menu">
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Homepage</a></li>
-										<li><a href="generic.html">Generic</a></li>
-										<li><a href="elements.html">Elements</a></li>
-										<li>
-											<span class="opener">Submenu</span>
-											<ul>
-												<li><a href="#">Lorem Dolor</a></li>
-												<li><a href="#">Ipsum Adipiscing</a></li>
-												<li><a href="#">Tempus Magna</a></li>
-												<li><a href="#">Feugiat Veroeros</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Etiam Dolore</a></li>
-										<li><a href="#">Adipiscing</a></li>
-										<li>
-											<span class="opener">Another Submenu</span>
-											<ul>
-												<li><a href="#">Lorem Dolor</a></li>
-												<li><a href="#">Ipsum Adipiscing</a></li>
-												<li><a href="#">Tempus Magna</a></li>
-												<li><a href="#">Feugiat Veroeros</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Maximus Erat</a></li>
-										<li><a href="#">Sapien Mauris</a></li>
-										<li><a href="#">Amet Lacinia</a></li>
-									</ul>
-								</nav>
-							-->
-
-							<!-- Section 
-								<section>
-									<header class="major">
-										<h2>Ante interdum</h2>
-									</header>
-									<div class="mini-posts">
-										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-										</article>
-									</div>
-									<ul class="actions">
-										<li><a href="#" class="button">More</a></li>
-									</ul>
-								</section>
-
-							-->
-
-							<!-- Section 
-								<section>
-									<header class="major">
-										<h2>Get in touch</h2>
-									</header>
-									<p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-										<li class="icon solid fa-phone">(000) 000-0000</li>
-										<li class="icon solid fa-home">1234 Somewhere Road #8254<br />
-										Nashville, TN 00000-0000</li>
-									</ul>
-								</section>
-
-							-->
-
-							<!-- Footer
-								<footer id="footer">
-									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-								</footer>
-                            -->
+							<div class="hero-stat-grid">
+								<article class="hero-stat-card">
+									<span class="hero-stat-label">Research approach</span>
+									<strong>Math and theorem-driven, not heuristic-first</strong>
+									<p>
+										I build from spectral theory, probabilistic graphical models,
+										and stability analysis to explain why models work and when they
+										fail.
+									</p>
+								</article>
+								<article class="hero-stat-card">
+									<span class="hero-stat-label">Industry and advising</span>
+									<strong>KLA AI engineer and scientific advisor across applied AI teams</strong>
+									<p>
+										Delivered 40% and 25% gains on ID and OOD metrology tasks,
+										5.8x runtime improvements, and production robustness wins in
+										industrial vision.
+									</p>
+								</article>
+								<article class="hero-stat-card">
+									<span class="hero-stat-label">Research record</span>
+									<strong>ICML, CVPR Demo, DAC, SPIE, ICLR reviewer, 2 disclosures</strong>
+									<p>
+										Published across ML, vision, EDA, and semiconductor venues
+										while also producing internal invention disclosures for
+										industrial AI.
+									</p>
+								</article>
+							</div>
 						</div>
-					</div>
-				-->
+					</section>
 
+					<section class="page-section projects-section reveal" id="projects">
+						<div class="section-heading section-heading--projects">
+							<h2>Selected work</h2>
+							<div class="projects-summary">
+								<span id="projectCount">Loading projects...</span>
+							</div>
+						</div>
+
+						<div class="project-toolbar">
+							<div class="filter-row" id="projectFilters" aria-label="Project filters"></div>
+							<label class="search-shell" for="projectSearch">
+								<span class="search-icon fas fa-search" aria-hidden="true"></span>
+								<input
+									type="search"
+									id="projectSearch"
+									placeholder="Search by topic, venue, method, or project name"
+									aria-label="Search projects"
+								/>
+							</label>
+						</div>
+
+						<div class="project-grid" id="projectGrid"></div>
+						<div class="project-empty" id="projectEmptyState" hidden>
+							No projects match the current filter.
+						</div>
+					</section>
+				</div>
 			</div>
+		</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/projects-data.js"></script>
+		<script src="assets/js/site.js"></script>
 	</body>
 </html>
