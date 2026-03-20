@@ -1,142 +1,136 @@
-\documentclass{resume} % Use the custom resume.cls style
 
-\usepackage[left=0.4 in,top=0.4in,right=0.4 in,bottom=0.4in]{geometry} % Document margins
+\documentclass[11pt]{article}
+\usepackage[margin=0.68in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
 \usepackage{xcolor}
-\definecolor{softorange}{RGB}{255,127,0}
-\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
-\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
-\name{Wuxinlin Cheng} % Your name
-% You can merge both of these into a single line, if you do not have a website.
-%\address{+1(123) 456-7890 \\ San Francisco, CA} 
-%\address{\href{mailto:wcheng7@stevens.edu}{wcheng7@stevens.edu} \\ C: 551-689-1091
-\address{Email: \href{mailto:chengwu1230@gmail.com}{chengwu1230@gmail.com} 
-\\ Web: \href{https://chengwuxinlin.github.io/}{chengwuxinlin.github.io} }  %
+\usepackage{etoolbox}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+
+\usepackage[default,scale=0.96]{sourcesanspro}
+
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=1.15em, itemsep=3pt, topsep=3pt, parsep=0pt, partopsep=0pt}
+\urlstyle{same}
+
+\definecolor{heading}{HTML}{274C5E}
+\definecolor{muted}{HTML}{5E6A71}
+
+\newcommand{\sectiontitle}[1]{%
+  \vspace{10pt}%
+  {\large\sffamily\bfseries\color{heading} #1}\par
+  \vspace{3pt}{\color{heading!55}\hrule}\vspace{6pt}
+}
+
+\newcommand{\company}[1]{\textbf{#1}\par}
+\newcommand{\role}[2]{\emph{#1}\hfill{\small #2}\par}
+\newcommand{\entryspace}{\vspace{5pt}}
+\newcommand{\pubsubhead}[1]{{\sffamily\bfseries #1}\par\vspace{2pt}}
 
 \begin{document}
-%----------------------------------------------------------------------------------------
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
+\fontsize{10.6}{13}\selectfont
 
-\begin{rSection}{Education}
-\item[]
-Stevens Institute of Technology\textnormal{ Hoboken, NJ - Doctor of Philosophy in Computer Engineering \hfill {Jan 2021 – May 2025}}\\
-Stevens Institute of Technology\textnormal{ Hoboken, NJ - Master of Engineering in Computer Engineering \hfill {Jan 2019 – Dec 2020}}\\
-Sichuan University\textnormal{ Chengdu, China - Bachelor of Engineering in Electrical Engineering \hfill {Sep 2014 – Jun 2018}}
-\end{rSection}
-%----------------------------------------------------------------------------------------
-% Projects
-%----------------------------------------------------------------------------------------
-\begin{rSection}{Projects}
-\item \textbf{SPADE: A Metric for Black-Box Adversarial Robustness Evaluation (ICML 2021)}
+{\fontsize{24}{27}\selectfont\bfseries Wuxinlin Cheng}\par
+\vspace{2pt}
+{\sffamily\color{muted} Applied Scientist - Machine Learning Algorithm Engineer - Ph.D. in Computer Engineering}\par
+\vspace{3pt}
+{\sffamily\small Hoboken, NJ - 551-689-1091 - \href{mailto:chengwu1230@gmail.com}{chengwu1230@gmail.com} - \href{https://chengwuxinlin.github.io}{chengwuxinlin.github.io}}\par
+
+\sectiontitle{Summary}
+Applied Scientist and Machine Learning Algorithm Engineer with a Ph.D. in Computer Engineering and 5+ years of research and industry experience across robust machine learning, computer vision, generative models, graph learning, NLP/LLM systems, and semiconductor AI. Track record of translating research into measurable gains in accuracy, robustness, and runtime, with first-author work at ICML and DAC and product-oriented work in metrology, industrial inspection, and real-time avatar systems.
+
+\sectiontitle{Experience}
+
+\company{KLA Corporation}
+\role{AI Algorithm Engineer (Deep Learning)}{Aug 2024 - Present}
+\role{AI Algorithm Engineer Intern (Deep Learning)}{May 2024 - Aug 2024}
 \begin{itemize}
-    \item Developed SPADE, a novel metric for evaluating adversarial robustness in ML models, employing bijective distance mappings of input/output graph-based manifolds. Enabled downstream applications such as adversarial training by revealing data robustness, resulting in up to $18\%$ enhanced accuracy compared to standard PGD training.
+    \item Developed machine-learning solutions for semiconductor metrology and advanced packaging, including Cu dishing metrology modeling later presented at SPIE Advanced Lithography + Patterning 2026.
+    \item Built a conditional diffusion model to synthesize high-dimensional spectral data for OOD robustness in a multi-label regression setting, improving in-distribution performance by 40\% and OOD performance by 25\%.
+    \item Developed feature-encoding methods for metrology data and contributed to two internal invention disclosures related to feature representation and generative modeling.
 \end{itemize}
 
-\item \textbf{Improving Out-of-Distribution (OOD) Robustness with Diffusion Model (KLA Corporation)}
+\entryspace
+\company{Stevens Institute of Technology}
+\role{Research Assistant}{Jun 2020 - May 2025}
 \begin{itemize}
-    \item Enhanced OOD robustness in a multi-label regression task using diffusion models. Developed a novel, brand-new diffusion model capable of conditionally generating extremely high-dimensional spectra OOD data. Achieved a 40\% improvement on in-distribution data and a 25\% improvement on OOD data.
+    \item Led research in adversarial robustness, graph learning, and AI stability, with first-author publications at ICML 2021 and DAC 2025 and additional work demonstrated at CVPR 2024.
+    \item Developed SPADE, a spectral method for black-box adversarial robustness evaluation that improved downstream adversarial training accuracy by up to 18\% compared with standard PGD training.
+    \item Developed CirSTAG, a GNN stability framework that produced 20\% stronger attack impact than baseline methods and reduced defense error by 50\% in benchmark evaluations; recognized as a DAC 2025 Best Paper Nominee.
 \end{itemize}
 
-\item \textbf{CirSTAG: Graph Neural Networks Stability Analysis \textcolor{softorange}{(Best Paper Nominee, top$\approx$0.5\%, DAC 2025)}}
+\entryspace
+\company{Stealth Startup}
+\role{Scientific Advisor / Lead of AI Lab}{Sep 2023 - Apr 2024 \textbar\ Concurrent with Ph.D.}
 \begin{itemize}
-    \item Developed CirSTAG, a spectral framework for analyzing the stability of Graph Neural Networks (GNNs) using probabilistic graphical models. CirSTAG outperforms traditional Netattack in diverse GNNs, achieving 20\% higher error rates in adversarial attacks and reducing defense error rates by 50\%. Additionally, CirSTAG offers a significant improvement in evaluating and enhancing large-scale integrated circuit design. Moreover, \textbf{CirSTAG can identify user stability in recommendation systems.}
+    \item Led development of 3D avatar assistants for education, entertainment, and virtual companionship, integrating NLP, LLM dialogue, facial reconstruction, real-time lip sync, and interactive talking-head systems.
+    \item Built a BERT-based emotion recognition model with 82\% accuracy across 27 emotions and a VITS2-based text-to-speech system with 4.4 mean opinion score and 0.014 real-time factor.
+    \item Co-developed a real-time talking-avatar pipeline from user-uploaded images, later demonstrated in a CVPR 2024 demo.
 \end{itemize}
 
-\item \textbf{AI Agent for Education, Entertainment, and Company in Virtual Reality }(Stealth Startup)
+\entryspace
+\company{LEMA (Beijing) Technology Co., Ltd.}
+\role{Scientific Advisor}{Dec 2021 - Sep 2023 \textbar\ Concurrent with Ph.D.}
 \begin{itemize}
-    \item Led a stealth startup lab in developing 3D avatar assistants, establishing an innovative framework integrating Natural Language Processing and 3D model reconstruction. Developed a language emotion recognition system using Bert with 82\% accuracy across 27 emotions and pioneered a text-to-speech model based on VIST2, achieving a 4.4 Mean Opinion Score and a 0.014 Real-Time Factor. Collaborated on facial reconstruction, LLM dialogue, and real-time lip-sync technologies.
+    \item Improved vial-classification accuracy by 42\% relative to the prior industrial model and reduced runtime 5.8x through data curation, network pruning, and robust training.
+    \item Improved hair-detection robustness on a 200-image internal dataset, achieving 99.97\% test accuracy and stable performance under severity-5 corruptions.
 \end{itemize}
 
+\entryspace
+\company{Shanghai ASES Spaceflight Technology Co. Ltd.}
+\role{Research Intern}{Sep 2018 - Jan 2019}
 
-\item \textbf{Real-Time Talking Heads from User-Uploaded Avatars (CVPR 2024: \href{https://drive.google.com/file/d/1HsqRwAYIS7WWpbNsqjjuBPfROzYh0opo/view?usp=sharing}{Video Example})}
+\sectiontitle{Education}
+
+\textbf{Stevens Institute of Technology}\hfill{\small Hoboken, NJ}\par
+Ph.D., Computer Engineering\hfill{\small Jan 2021 - May 2025}\par
+M.Eng., Computer Engineering\hfill{\small Jan 2019 - Dec 2020}\par
+
+\entryspace
+\textbf{Sichuan University}\hfill{\small Chengdu, China}\par
+B.Eng., Electrical Engineering\hfill{\small Sep 2014 - Jun 2018}\par
+
+\sectiontitle{Selected Publications and Research Output}
+{\small\color{muted}First author unless noted otherwise.}\par\vspace{4pt}
+
+\pubsubhead{Peer-reviewed publications}
 \begin{itemize}
-    \item Developed a state-of-the-art system capable of generating real-time talking heads from user-uploaded avatar images, synchronized with any audio input. Pioneered the integration of this technology with LLM for live, avatar-based conversations, enhancing user interaction and engagement across various digital platforms. This innovation opens new interactive possibilities in social media, gaming, e-learning, and virtual customer support by facilitating more natural and engaging digital communication experiences.
+    \item \textit{CirSTAG: Circuit Stability Analysis via Graph Neural Networks}. Design Automation Conference (DAC), 2025. Best Paper Nominee.
+    \item \textit{SPADE: A Spectral Method for Black-Box Adversarial Robustness Evaluation}. International Conference on Machine Learning (ICML), 2021.
+    \item \textit{SGM-PINN: Sampling Graphical Models for Faster Training of Physics-Informed Neural Networks}. Design Automation Conference (DAC), 2024. Co-author.
 \end{itemize}
 
-
-
-\item \textbf{Model Accuracy \& Runtime Improvement for Vial Classification (LEMA (Beijing) Technology Co., Ltd.)}
+\pubsubhead{Demos and presentations}
 \begin{itemize}
-    \item Improved accuracy and reduced computational load for vial classification models by leveraging data selection, neural network pruning, and robust training strategies. Achievements include a significant $42\%$ improvement in model accuracy and a $5.8\times$ speedup in runtime over previous industrial models.
+    \item \textit{Towards a Real-Time Interactive Framework for Talking Avatars}. IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Demo, 2024.
+    \item \textit{Machine-learning solution for Cu dishing metrology in advanced packaging}. SPIE Advanced Lithography + Patterning, conference presentation, 2026.
 \end{itemize}
 
-\item \textbf{Hair Detection Stability Improvement (LEMA (Beijing) Technology Co., Ltd.)}
+\pubsubhead{Manuscripts under review}
 \begin{itemize}
-    \item Enhanced stability and performance of hair detection models through robust training and data augmentations applied to a small dataset (200 pictures). Achieved exceptional test accuracy of 99.97\% on the LEMA (Beijing) Technology Co., Ltd model. Notably, the model's accuracy remained consistent even under severity 5 corruption, demonstrating robustness to reasonable perturbations such as brightness differences or blur.
+    \item \textit{SALMAN: Stability Analysis of Language Models Through the Maps Between Graph-based Manifolds}. ICML 2026, under review.
+    \item \textit{SAGMAN: Stability Analysis of Graph Neural Networks on the Manifolds}. ICML 2026, under review.
 \end{itemize}
 
+\sectiontitle{Skills}
+\textbf{Machine Learning:} Robustness and OOD evaluation, computer vision, diffusion and generative models, graph neural networks, NLP, LLM systems, multimodal AI, model compression\par
+\textbf{Languages and Tools:} Python, C++, PyTorch, TensorFlow, scikit-learn
 
-\end{rSection} 
-
-\begin{rSection}{PERSONAL EXPERIENCE}
-\item[]
-AI Algorithm Engineer (Deep Learning)\textnormal{- KLA Corporation}\textnormal{\hfill {August 2024 – Present}} \\
-Conference Reviewer \textnormal{- ICLR \hfill {2026}} \\
-Research Assistant \textnormal{- Stevens Institute of Technology}\textnormal{\hfill {June 2020 – May 2025}} \\
-AI Algorithm Engineer Intern (Deep Learning)\textnormal{- KLA Corporation}\textnormal{\hfill {May 2024 – August 2024}} \\
-\textbf{Scientific Advisor/Lead of AI Lab} \textnormal{- Stealth Startup       \hfill {Sep 2023 – April 2024}} \\%AskAlora, Interest Group AI 
-\textbf{Scientific Advisor} \textnormal{- LEMA (Beijing) Technology Co., Ltd.\hfill {Dec 2021 – Sep 2023}} \\
-\textbf{Research Intern} \textnormal{- Shanghai ASES Spaceflight Technology Co. Ltd.\hfill {Sep 2018 – Jan 2019}} 
-
-\end{rSection}
-
-%----------------------------------------------------------------------------------------
-% TECHINICAL STRENGTHS	
-%----------------------------------------------------------------------------------------
-\begin{rSection}{SKILLS}
-\item[]
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Research Areas & \textnormal{Graph Learning, ML, CV, AI Stability, NLP, AIGC, Diffusion Model, LLM, GNN, Model Compression} \\
-Software \& Tools & \textnormal{Python, C++, Pytorch, Tensorflow, Scikit-learn} \\
-\end{tabular}\\
-\end{rSection}
-
-
-%----------------------------------------------------------------------------------------
-\begin{rSection}{AWARDS AND HONORS} 
-\item[]
+\sectiontitle{Awards, Service, and Intellectual Property}
 \begin{itemize}
-    \item 	\textnormal{Outstanding Ph.D. Dissertation Award in Computer Engineering, USA \hfill{May 2025}}
-    \item 	\textnormal{Stevens Institute of Technology scholarship, USA \hfill{Jan 2020}}
-    \item 	\textnormal{National Entrepreneurship (top $1\%$ nationally) at 3rd China International College “Internet Plus” Competition \hfill{Jan 2018}}
-    \item 	\textnormal{Sichuan University scholarship, China \hfill{Dec 2017}}
-    \item 	\textnormal{Honorable Award (top $21\%$ globally) at the Mathematical Contest in Modeling, USA \hfill{Apr 2017}}
+    \item Outstanding Ph.D. Dissertation Award in Computer Engineering, Stevens Institute of Technology, 2025.
+    \item DAC 2025 Best Paper Nominee (approximately top 0.5\%).
+    \item Conference Reviewer, ICLR 2026.
+    \item Co-inventor on two internal invention disclosures at KLA related to metrology feature encoding and generative modeling.
+    \item National Entrepreneurship Award, 3rd China International College Internet Plus Competition (top 1\% nationally), 2018.
 \end{itemize}
-
-
-\end{rSection}
-
-
-\begin{rSection}{Publication}
-\item \textbf{Wuxinlin Cheng}. \textnormal{``Machine-learning solution for Cu dishing metrology in advanced packaging.'' \textit{SPIE Advanced Lithography + Patterning}, \textcolor{softorange}{[Conference Presentation]}, Paper 13981--117, 2026.}
-
-
-\item \textbf{Wuxinlin Cheng, \textnormal{Yupeng Cao, Jinwen Wu, Koduvayur Subbalakshmi, Tian Han, and Zhuo Feng. “SALMAN: Stability Analysis of  Language Models Through the Maps Between Graph-based Manifolds.” ICLR 2026 Under Review}}
-\item \textbf{Wuxinlin Cheng, \textnormal{Chenhui Deng, Ali Aghdaei, Zhiru Zhang, and Zhuo Feng. “SAGMAN: Stability Analysis of Graph Neural Networks on the Manifolds.” ICLR 2026 Under Review}}
-\item \textbf{Wuxinlin Cheng, \textnormal{Yihang Yuan, Chenhui Deng, Ali Aghdaei, Zhiru Zhang, and Zhuo Feng. “CirSTAG: Circuit Stability Analysis via Graph
-Neural Networks.” Design Automation Conference (DAC), 2025}} 
-\item \textbf{Wuxinlin Cheng, \textnormal{Yupeng Cao, Cheng Wan, Sihan Chen. “Towards a Real-Time Interactive Framework for Talking Avatars.” The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) demo 2024}}
-\item \textnormal{John Anticev, Ali Aghdaei, }\textbf{Wuxinlin Cheng, }\textnormal{and Zhuo Feng. “SGM-PINN: Sampling Graphical Models for Faster Training of Physics-Informed Neural Networks.” Design Automation Conference (DAC), 2024}
-\item \textbf{Wuxinlin Cheng, \textnormal{Chenhui Deng, Zhiqiang Zhao, Yaohui Cai, Zhiru Zhang, and Zhuo Feng. “SPADE: A Spectral Method for Black-Box Adversarial Robustness Evaluation.” International Conference on Machine Learning (ICML), 2021.}} 
-\item \textbf{Wuxinlin Cheng, \textnormal{Xu Zhou, Xin He. “Quick Pass Optimization in Airport Security Check,” TianFuShuXue, ISSN: 1006-0324, Vol, 21, 2018}}
-
-
-\end{rSection}
-
-
-\begin{rSection}{Intellectual Property}
-\item \textbf{KLA Corporation}. \textnormal{\textcolor{softorange}{[Internal Invention Disclosure]} Developed a proprietary feature-encoding method in metrology modeling, improving both in-distribution accuracy and out-of-distribution robustness.}
-
-
-
-\item \textbf{KLA Corporation}. \textnormal{\textcolor{softorange}{[Internal Invention Disclosure]} Proprietary generative modeling approach for synthesizing out-of-distribution metrology data to improve model robustness.}
-
-
-\end{rSection} 
-
-%----------------------------------------------------------------------------------------
-
-
 
 \end{document}
