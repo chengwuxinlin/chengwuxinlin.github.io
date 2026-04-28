@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Wuxinlin Cheng | AI Researcher</title>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1"
+		/>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		<meta
+			name="description"
+			content="A lightweight public page for selected AI research and systems projects."
+		/>
+		<link rel="stylesheet" href="assets/css/main.css?v=20260428" />
+		<link rel="stylesheet" href="assets/css/custom.css?v=20260428" />
+	</head>
+	<body class="is-preload has-ai-theme theme-light">
+		<canvas id="neuralField" aria-hidden="true"></canvas>
+
+		<div id="wrapper">
+			<div id="main">
+				<div class="inner">
+					<header class="site-header reveal" id="top">
+						<a href="#top" class="site-brand" aria-label="Wuxinlin Cheng home">
+							<span class="site-brand-mark">WC</span>
+							<span class="site-brand-copy">
+								<strong>Wuxinlin Cheng</strong>
+								<small>Theorem-driven AI for real systems</small>
+							</span>
+						</a>
+
+						<nav class="site-nav" aria-label="Primary">
+							<a href="#projects">Projects</a>
+							<a href="https://github.com/chengwuxinlin">GitHub</a>
+							<button type="button" class="theme-toggle" id="themeToggle">Dark mode</button>
+						</nav>
+					</header>
+
+					<section class="page-section hero-section reveal">
+						<div class="hero-copy">
+							<p class="eyebrow">Robust AI, generative modeling, and graph learning</p>
+							<h1>Selected AI systems and research projects.</h1>
+							<p class="hero-summary">
+								This page keeps a compact public overview of project themes in
+								robust machine learning, generative AI, graph-based analysis, and
+								training efficiency.
+							</p>
+							<p class="hero-note">
+								This public version keeps only a compact project overview and
+								high-level research themes.
+							</p>
+
+							<div class="action-row">
+								<a href="#projects" class="action-button action-button--primary">Browse Projects</a>
+								<a href="https://github.com/chengwuxinlin" class="action-button">GitHub</a>
+							</div>
+
+							<div class="meta-row">
+								<div class="meta-pill">
+									<span class="meta-label">Site updated</span>
+									<strong id="projectsLastUpdated">Loading...</strong>
+								</div>
+							</div>
+						</div>
+
+						<div class="hero-aside">
+							<div class="portrait-card">
+								<div class="portrait-orbit portrait-orbit--one" aria-hidden="true"></div>
+								<div class="portrait-orbit portrait-orbit--two" aria-hidden="true"></div>
+								<div class="portrait-grid" aria-hidden="true"></div>
+								<img src="images/pic10.jpg?v=20260428" alt="Profile image" />
+							</div>
+
+							<div class="hero-stat-grid">
+								<article class="hero-stat-card">
+									<span class="hero-stat-label">Research approach</span>
+									<strong>Mechanism-first modeling and evaluation</strong>
+									<p>
+										Projects emphasize graph structure, stability, uncertainty,
+										and failure-mode analysis.
+									</p>
+								</article>
+								<article class="hero-stat-card">
+									<span class="hero-stat-label">Applied systems</span>
+									<strong>Generative and robust-learning pipelines</strong>
+									<p>
+										Selected work covers diffusion-style data generation, vision
+										robustness, and real-time interactive AI systems.
+									</p>
+								</article>
+								<article class="hero-stat-card">
+									<span class="hero-stat-label">Research record</span>
+									<strong>Machine learning, vision, and graph systems</strong>
+									<p>
+										Public project summaries focus on methods and themes rather
+										than personal or employment details.
+									</p>
+								</article>
+							</div>
+						</div>
+					</section>
+
+					<section class="page-section projects-section reveal" id="projects">
+						<div class="section-heading section-heading--projects">
+							<h2>Selected work</h2>
+							<div class="projects-summary">
+								<span id="projectCount">Loading projects...</span>
+							</div>
+						</div>
+
+						<div class="project-toolbar">
+							<div class="filter-row" id="projectFilters" aria-label="Project filters"></div>
+							<label class="search-shell" for="projectSearch">
+								<span class="search-icon fas fa-search" aria-hidden="true"></span>
+								<input
+									type="search"
+									id="projectSearch"
+									placeholder="Search by topic, venue, method, or project name"
+									aria-label="Search projects"
+								/>
+							</label>
+						</div>
+
+						<div class="project-grid" id="projectGrid"></div>
+						<div class="project-empty" id="projectEmptyState" hidden>
+							No projects match the current filter.
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+
+		<script src="assets/js/jquery.min.js?v=20260428"></script>
+		<script src="assets/js/browser.min.js?v=20260428"></script>
+		<script src="assets/js/breakpoints.min.js?v=20260428"></script>
+		<script src="assets/js/util.js?v=20260428"></script>
+		<script src="assets/js/main.js?v=20260428"></script>
+		<script src="assets/js/projects-data.js?v=20260428"></script>
+		<script src="assets/js/site.js?v=20260428"></script>
+	</body>
+</html>
