@@ -130,7 +130,7 @@
 
 	async function syncUpdatedDates() {
 		const pageDate = safeDate(document.lastModified);
-		const projectDate = await readLastModified("assets/js/projects-data.js?v=20260428", pageDate);
+		const projectDate = await readLastModified("assets/js/projects-data.js?v=20260428b", pageDate);
 		const projectNode = document.getElementById("projectsLastUpdated");
 
 		if (projectNode) {
@@ -341,28 +341,56 @@
 		renderProjects();
 	}
 
-	function initReveal() {
-		const nodes = document.querySelectorAll(".reveal");
-		if (prefersReducedMotion || !("IntersectionObserver" in window)) {
-			nodes.forEach((node) => node.classList.add("is-visible"));
+	function positionMobileSections() {
+		const hero = document.querySelector(".hero-section");
+		const aside = document.querySelector(".hero-aside");
+		const projects = document.getElementById("projects");
+		if (!hero || !aside || !projects) {
 			return;
 		}
 
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (!entry.isIntersecting) {
-						return;
-					}
+		if (smallScreenQuery.matches) {
+			if (aside.parentElement === hero) {
+				projects.after(aside);
+			}
+			aside.classList.add("hero-aside--after-projects");
+			return;
+		}
 
-					entry.target.classList.add("is-visible");
-					observer.unobserve(entry.target);
-				});
-			},
-			{ threshold: 0.16 }
-		);
+		if (aside.parentElement !== hero) {
+			hero.appendChild(aside);
+		}
+		aside.classList.remove("hero-aside--after-projects");
+	}
 
-		nodes.forEach((node) => observer.observe(node));
+	function scrollToProjects() {
+		const projects = document.getElementById("projects");
+		if (projects) {
+			projects.scrollIntoView({ block: "start" });
+		}
+	}
+
+	function syncInitialHashScroll() {
+		if (window.location.hash === "#projects") {
+			window.requestAnimationFrame(scrollToProjects);
+		}
+	}
+
+	function initProjectNavigation() {
+		document.querySelectorAll('a[href="#projects"]').forEach((link) => {
+			link.addEventListener("click", (event) => {
+				event.preventDefault();
+				positionMobileSections();
+				scrollToProjects();
+				if (window.history && typeof window.history.pushState === "function") {
+					window.history.pushState(null, "", "#projects");
+				}
+			});
+		});
+	}
+
+	function initReveal() {
+		document.querySelectorAll(".reveal").forEach((node) => node.classList.add("is-visible"));
 	}
 
 	function initNeuralField() {
@@ -551,9 +579,15 @@
 
 		window.addEventListener("resize", resize);
 		if (typeof smallScreenQuery.addEventListener === "function") {
-			smallScreenQuery.addEventListener("change", resize);
+			smallScreenQuery.addEventListener("change", () => {
+				resize();
+				positionMobileSections();
+			});
 		} else if (typeof smallScreenQuery.addListener === "function") {
-			smallScreenQuery.addListener(resize);
+			smallScreenQuery.addListener(() => {
+				resize();
+				positionMobileSections();
+			});
 		}
 		window.addEventListener("pointermove", (event) => {
 			pointer.x = event.clientX;
@@ -583,8 +617,16 @@
 
 	document.addEventListener("DOMContentLoaded", () => {
 		initTheme();
+		positionMobileSections();
+		if (typeof smallScreenQuery.addEventListener === "function") {
+			smallScreenQuery.addEventListener("change", positionMobileSections);
+		} else if (typeof smallScreenQuery.addListener === "function") {
+			smallScreenQuery.addListener(positionMobileSections);
+		}
 		initReveal();
 		initProjectSection();
+		initProjectNavigation();
+		syncInitialHashScroll();
 		syncUpdatedDates();
 		initNeuralField();
 	});

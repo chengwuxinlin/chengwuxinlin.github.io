@@ -85,7 +85,7 @@ body.theme-light {
 
 html {
 	overflow-x: hidden;
-	scroll-behavior: smooth;
+	scroll-behavior: auto;
 }
 
 body.has-ai-theme::before,
@@ -424,6 +424,11 @@ button.theme-toggle {
 	flex-direction: column;
 	gap: 0.95rem;
 	padding-right: 0.2rem;
+}
+
+.hero-aside--after-projects {
+	margin-top: 1.75rem;
+	padding-right: 0;
 }
 
 .portrait-card {
@@ -847,9 +852,9 @@ button.filter-button.is-active {
 }
 
 .reveal {
-	opacity: 0;
-	transform: translateY(24px);
-	transition: opacity 0.8s ease, transform 0.8s ease;
+	opacity: 1;
+	transform: none;
+	transition: none;
 }
 
 .reveal.is-visible {
