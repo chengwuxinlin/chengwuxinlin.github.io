@@ -434,12 +434,14 @@ button.theme-toggle {
 		var(--surface-strong);
 	border: 1px solid var(--border);
 	border-radius: 1.4rem;
+	box-sizing: border-box;
 	display: flex;
 	grid-column: 2;
 	grid-row: 1;
 	justify-content: center;
 	min-height: 0;
 	overflow: hidden;
+	padding: clamp(0.8rem, 2vw, 1.25rem);
 	position: relative;
 }
 
@@ -975,6 +977,15 @@ button.filter-button.is-active {
 }
 
 @media screen and (max-width: 736px) {
+	html,
+	body.has-ai-theme,
+	#wrapper,
+	#main,
+	#main > .inner {
+		max-width: 100%;
+		overflow-x: hidden;
+	}
+
 	#main > .inner {
 		padding: 0.85rem 0.75rem 2.5rem 0.75rem;
 	}
@@ -983,10 +994,19 @@ button.filter-button.is-active {
 	.hero-section,
 	.projects-section {
 		border-radius: 1rem;
+		max-width: 100%;
+		width: 100%;
 	}
 
 	.hero-section {
 		gap: 1rem;
+	}
+
+	.hero-copy,
+	.hero-aside,
+	.portrait-card {
+		max-width: 100%;
+		min-width: 0;
 	}
 
 	.site-header {
@@ -1050,6 +1070,11 @@ button.filter-button.is-active {
 	.hero-section h1 {
 		font-size: 1.85rem;
 		max-width: 100%;
+		overflow-wrap: anywhere;
+	}
+
+	.eyebrow {
+		overflow-wrap: anywhere;
 	}
 
 	.hero-summary,
@@ -1066,6 +1091,13 @@ button.filter-button.is-active {
 
 	.portrait-card {
 		border-radius: 1rem;
+		padding: 0.75rem;
+		width: 100%;
+	}
+
+	.portrait-card img {
+		max-height: 100%;
+		max-width: 100%;
 	}
 
 	.hero-stat-card {

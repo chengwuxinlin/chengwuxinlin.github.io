@@ -52,7 +52,7 @@ window.PROJECTS_DATA = [
 		summary:
 			"A black-box adversarial robustness metric that studies graph-based input and output manifolds to reveal both model stability and sample-level robustness.",
 		tags: ["Adversarial Robustness", "Graph Manifolds", "Black-Box Evaluation"],
-		image: "images/SPADE.png?v=20260428d",
+		image: "images/SPADE.png?v=20260428e",
 		featured: false,
 		links: [
 			{
@@ -70,7 +70,7 @@ window.PROJECTS_DATA = [
 		summary:
 			"Used probabilistic graphical models to drive importance sampling for physics-informed neural network training, reducing the amount of redundant data processed in each epoch.",
 		tags: ["PINN", "Sampling", "Training Efficiency"],
-		image: "images/SGM-PINN.png?v=20260428d",
+		image: "images/SGM-PINN.png?v=20260428e",
 		featured: false,
 		links: []
 	},
@@ -96,7 +96,7 @@ window.PROJECTS_DATA = [
 		summary:
 			"A black-box coreset selection algorithm based on Gaussian graphical models for accelerating training while preserving downstream model quality.",
 		tags: ["Coreset Selection", "Gaussian Graphs", "Efficiency"],
-		image: "images/SAGRAM.png?v=20260428d",
+		image: "images/SAGRAM.png?v=20260428e",
 		featured: false,
 		links: []
 	},
@@ -109,7 +109,7 @@ window.PROJECTS_DATA = [
 		summary:
 			"Applied robust training and augmentation to a tiny industrial dataset, producing a vision model that stayed reliable under realistic perturbations such as blur and lighting shifts.",
 		tags: ["Robust Vision", "Small Data", "Industrial Deployment"],
-		image: "images/hair.png?v=20260428d",
+		image: "images/hair.png?v=20260428e",
 		featured: false,
 		links: [
 			{
@@ -127,7 +127,7 @@ window.PROJECTS_DATA = [
 		summary:
 			"Combined data selection, neural network pruning, augmentation, and robust training to improve both quality and throughput in an industrial classification pipeline.",
 		tags: ["Model Compression", "Data Selection", "Production Vision"],
-		image: "images/lema.png?v=20260428d",
+		image: "images/lema.png?v=20260428e",
 		featured: false,
 		links: [
 			{

@@ -130,7 +130,7 @@
 
 	async function syncUpdatedDates() {
 		const pageDate = safeDate(document.lastModified);
-		const projectDate = await readLastModified("assets/js/projects-data.js?v=20260428d", pageDate);
+		const projectDate = await readLastModified("assets/js/projects-data.js?v=20260428e", pageDate);
 		const projectNode = document.getElementById("projectsLastUpdated");
 
 		if (projectNode) {
