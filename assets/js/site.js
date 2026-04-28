@@ -130,7 +130,7 @@
 
 	async function syncUpdatedDates() {
 		const pageDate = safeDate(document.lastModified);
-		const projectDate = await readLastModified("assets/js/projects-data.js?v=20260428b", pageDate);
+		const projectDate = await readLastModified("assets/js/projects-data.js?v=20260428c", pageDate);
 		const projectNode = document.getElementById("projectsLastUpdated");
 
 		if (projectNode) {
@@ -341,28 +341,6 @@
 		renderProjects();
 	}
 
-	function positionMobileSections() {
-		const hero = document.querySelector(".hero-section");
-		const aside = document.querySelector(".hero-aside");
-		const projects = document.getElementById("projects");
-		if (!hero || !aside || !projects) {
-			return;
-		}
-
-		if (smallScreenQuery.matches) {
-			if (aside.parentElement === hero) {
-				projects.after(aside);
-			}
-			aside.classList.add("hero-aside--after-projects");
-			return;
-		}
-
-		if (aside.parentElement !== hero) {
-			hero.appendChild(aside);
-		}
-		aside.classList.remove("hero-aside--after-projects");
-	}
-
 	function scrollToProjects() {
 		const projects = document.getElementById("projects");
 		if (projects) {
@@ -380,7 +358,6 @@
 		document.querySelectorAll('a[href="#projects"]').forEach((link) => {
 			link.addEventListener("click", (event) => {
 				event.preventDefault();
-				positionMobileSections();
 				scrollToProjects();
 				if (window.history && typeof window.history.pushState === "function") {
 					window.history.pushState(null, "", "#projects");
@@ -579,15 +556,9 @@
 
 		window.addEventListener("resize", resize);
 		if (typeof smallScreenQuery.addEventListener === "function") {
-			smallScreenQuery.addEventListener("change", () => {
-				resize();
-				positionMobileSections();
-			});
+			smallScreenQuery.addEventListener("change", resize);
 		} else if (typeof smallScreenQuery.addListener === "function") {
-			smallScreenQuery.addListener(() => {
-				resize();
-				positionMobileSections();
-			});
+			smallScreenQuery.addListener(resize);
 		}
 		window.addEventListener("pointermove", (event) => {
 			pointer.x = event.clientX;
@@ -617,12 +588,6 @@
 
 	document.addEventListener("DOMContentLoaded", () => {
 		initTheme();
-		positionMobileSections();
-		if (typeof smallScreenQuery.addEventListener === "function") {
-			smallScreenQuery.addEventListener("change", positionMobileSections);
-		} else if (typeof smallScreenQuery.addListener === "function") {
-			smallScreenQuery.addListener(positionMobileSections);
-		}
 		initReveal();
 		initProjectSection();
 		initProjectNavigation();
