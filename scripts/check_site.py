@@ -134,6 +134,8 @@ def check_document(document, documents):
 
 
 def check_static_content(index):
+    require(not re.search(r"gmail\.com|mailto:", index.path.read_text(encoding="utf-8-sig"), re.I),
+            "index.html: private email contact must not be published; use LinkedIn")
     projects = [e for e in index.find("article") if "data-category" in e.attrs]
     require(len(projects) >= 12, "index.html: selected work must contain the twelve reviewed project articles")
     categories = set()

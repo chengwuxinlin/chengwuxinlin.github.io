@@ -22,7 +22,7 @@ Run `python scripts/check_site.py` for local reference, content, accessibility-m
 - `assets/css/site.css`: layout, typography, colors, and responsive styles.
 - `assets/js/site.js`: optional project search, topic filters, reading-position navigation, and a keyboard-accessible cover viewer. Cover links remain ordinary image links without JavaScript.
 - `assets/images/`: current site artwork and optimized assets. The hero manifold can be regenerated with `python scripts/build_manifold.py`.
-- `assets/js/ambient-field.js` and `assets/css/ambient-field.css`: restrained pointer-responsive background motion, with pause/resume, reduced-motion support, and hidden-tab suspension.
+- `assets/js/ambient-field.js` and `assets/css/ambient-field.css`: a full-viewport manifold point field with irregular surface samples, slow drift, and local mouse deformation. Includes pause/resume, reduced-motion support, and hidden-tab suspension; opaque cards preserve reading clarity.
 - `images/`: retained original image assets.
 - `assets/images/covers/`: twelve project covers; `ATTRIBUTION.md` records source material and the SGM cover license. Each cover is framed consistently and labeled as a source example, published result, demo frame, or illustration.
 - `scripts/covers/`: optional rebuild scripts (Pillow; FFmpeg for the avatar cover). Original download/generation inputs stay in ignored `.local/cover-sources/` and are not included in the public site.

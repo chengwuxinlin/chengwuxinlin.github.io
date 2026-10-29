@@ -186,11 +186,9 @@ span.publication-end { color: var(--muted); font-size: 10px; }
 .contact-inner h2 { font-size: 45px; }
 .contact-inner p:not(.eyebrow) { margin-top: 22px; font-size: 13px; line-height: 1.9; color: #cbd7c8; }
 .contact-links { padding-left: 25px; }
-.email-link { display: flex; justify-content: space-between; gap: 24px; font-size: clamp(16px, 1.7vw, 24px); font-weight: 300; border-bottom: 1px solid #6a8775; padding-block: 20px; letter-spacing: -.4px; }
-.email-link:hover { color: #dbe9d5; }
-.social-links { display: flex; gap: 31px; margin-top: 24px; font-size: 12px; }
-.social-links a { display: flex; gap: 18px; padding-block: 5px; }
-.social-links a:hover { text-decoration: underline; }
+.linkedin-link { display: flex; justify-content: space-between; gap: 24px; font-size: clamp(16px, 1.7vw, 24px); font-weight: 300; border-bottom: 1px solid #6a8775; padding-block: 20px; letter-spacing: -.4px; }
+.contact-links .contact-note { font-size: 12px; margin-top: 16px; }
+.linkedin-link:hover { color: #dbe9d5; }
 .contact-section a:focus-visible { outline-color: var(--paper); }
 .site-footer { display: flex; justify-content: space-between; align-items: center; gap: 25px; padding-block: 26px; font-size: 10px; color: var(--muted); }
 .site-footer a { padding: 8px 0; color: var(--green); }
@@ -298,8 +296,7 @@ span.publication-end { color: var(--muted); font-size: 10px; }
   .contact-inner { grid-template-columns: 1fr; gap: 27px; padding-block: 50px; }
   .contact-inner h2 { font-size: 38px; }
   .contact-inner p:not(.eyebrow) { font-size: 13px; }
-  .email-link { font-size: 21px; padding-block: 17px; }
-  .social-links { margin-top: 17px; }
+  .linkedin-link { font-size: 21px; padding-block: 17px; }
   .site-footer { flex-wrap: wrap; gap: 10px 20px; padding-block: 21px; }
   .site-footer #motion-toggle { order: 3; width: 100%; justify-content: flex-start; }
   .site-footer a { margin-left: auto; }
@@ -314,7 +311,7 @@ span.publication-end { color: var(--muted); font-size: 10px; }
   .focus-strip p { gap: 10px; }
   .focus-strip p > span { font-size: 9px; }
   .figure-note { font-size: 9px; }
-  .email-link { font-size: 18px; }
+  .linkedin-link { font-size: 18px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
