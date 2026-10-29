@@ -1,0 +1,6 @@
+# Keep repository-only documentation and local tooling out of GitHub Pages.
+exclude:
+  - README.md
+  - LICENSE.txt
+  - scripts
+  - .local

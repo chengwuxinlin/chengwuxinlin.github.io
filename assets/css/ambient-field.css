@@ -1,0 +1,29 @@
+/* The paper is the base layer; the field stays behind every reading surface. */
+body { isolation: isolate; }
+#ambient-field {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#motion-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 5px 0;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  color: var(--muted, #626a61);
+  font: 11px/1.5 var(--sans, sans-serif);
+  text-align: left;
+}
+#motion-toggle:hover { color: var(--green, #234b3e); border-bottom-color: currentColor; }
+#motion-toggle:focus-visible { outline: 2px solid var(--green, #234b3e); outline-offset: 5px; }
+#motion-toggle[hidden] { display: none !important; }
+@media print {
+  #ambient-field, #motion-toggle { display: none !important; }
+}

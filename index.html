@@ -1,151 +1,224 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
-	<head>
-		<title>Wuxinlin Cheng | AI Researcher</title>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1"
-		/>
-		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-		<meta http-equiv="Pragma" content="no-cache" />
-		<meta http-equiv="Expires" content="0" />
-		<meta
-			name="description"
-			content="Wuxinlin Cheng is an AI researcher and engineer working on robust machine learning, graph learning, diffusion models, and generative interfaces."
-		/>
-		<link rel="stylesheet" href="assets/css/main.css?v=20260428e" />
-		<link rel="stylesheet" href="assets/css/custom.css?v=20260428e" />
-	</head>
-	<body class="is-preload has-ai-theme theme-light">
-		<canvas id="neuralField" aria-hidden="true"></canvas>
-
-		<div id="wrapper">
-			<div id="main">
-				<div class="inner">
-					<header class="site-header reveal" id="top">
-						<a href="#top" class="site-brand" aria-label="Wuxinlin Cheng home">
-							<span class="site-brand-mark">WC</span>
-							<span class="site-brand-copy">
-								<strong>Wuxinlin Cheng</strong>
-								<small>Theorem-driven AI for real systems</small>
-							</span>
-						</a>
-
-						<nav class="site-nav" aria-label="Primary">
-							<a href="#projects">Projects</a>
-							<a href="mailto:chengwu1230@gmail.com">Email</a>
-							<a href="https://github.com/chengwuxinlin">GitHub</a>
-							<button type="button" class="theme-toggle" id="themeToggle">Dark mode</button>
-						</nav>
-					</header>
-
-					<section class="page-section hero-section reveal">
-						<div class="hero-copy">
-							<p class="eyebrow">PhD researcher in robust AI, generative AI, and accelerated learning</p>
-							<h1>Rigorous AI for generative systems, defect detection, and accelerated learning.</h1>
-							<p class="hero-summary">
-								I build mathematically grounded AI across generative models,
-								robust defect detection, graph learning, stability analysis,
-								diffusion methods, and training acceleration for industrial and
-								research systems.
-							</p>
-							<p class="hero-note">
-								Recent highlights include a DAC 2025 Best Paper Nominee, an SPIE
-								Advanced Lithography + Patterning paper, two KLA invention
-								disclosures, and scientific advisory work across startup and
-								industrial AI programs.
-							</p>
-
-							<div class="action-row">
-								<a href="#projects" class="action-button action-button--primary">Browse Projects</a>
-								<a href="mailto:chengwu1230@gmail.com" class="action-button action-button--ghost">Contact</a>
-							</div>
-
-							<div class="meta-row">
-								<div class="meta-pill">
-									<span class="meta-label">Projects updated</span>
-									<strong id="projectsLastUpdated">Loading...</strong>
-								</div>
-							</div>
-						</div>
-
-						<div class="hero-aside">
-							<div class="portrait-card">
-								<div class="portrait-orbit portrait-orbit--one" aria-hidden="true"></div>
-								<div class="portrait-orbit portrait-orbit--two" aria-hidden="true"></div>
-								<div class="portrait-grid" aria-hidden="true"></div>
-								<img src="images/pic10.jpg?v=20260428e" alt="Portrait of Wuxinlin Cheng" />
-							</div>
-
-							<div class="hero-stat-grid">
-								<article class="hero-stat-card">
-									<span class="hero-stat-label">Research approach</span>
-									<strong>Math and theorem-driven, not heuristic-first</strong>
-									<p>
-										I build from spectral theory, probabilistic graphical models,
-										and stability analysis to explain why models work and when they
-										fail.
-									</p>
-								</article>
-								<article class="hero-stat-card">
-									<span class="hero-stat-label">Industry and advising</span>
-									<strong>KLA AI engineer and scientific advisor across applied AI teams</strong>
-									<p>
-										Delivered 40% and 25% gains on ID and OOD metrology tasks,
-										5.8x runtime improvements, and production robustness wins in
-										industrial vision.
-									</p>
-								</article>
-								<article class="hero-stat-card">
-									<span class="hero-stat-label">Research record</span>
-									<strong>ICML, CVPR Demo, DAC, SPIE, ICLR reviewer, 2 disclosures</strong>
-									<p>
-										Published across ML, vision, EDA, and semiconductor venues
-										while also producing internal invention disclosures for
-										industrial AI.
-									</p>
-								</article>
-							</div>
-						</div>
-					</section>
-
-					<section class="page-section projects-section reveal" id="projects">
-						<div class="section-heading section-heading--projects">
-							<h2>Selected work</h2>
-							<div class="projects-summary">
-								<span id="projectCount">Loading projects...</span>
-							</div>
-						</div>
-
-						<div class="project-toolbar">
-							<div class="filter-row" id="projectFilters" aria-label="Project filters"></div>
-							<label class="search-shell" for="projectSearch">
-								<span class="search-icon fas fa-search" aria-hidden="true"></span>
-								<input
-									type="search"
-									id="projectSearch"
-									placeholder="Search by topic, venue, method, or project name"
-									aria-label="Search projects"
-								/>
-							</label>
-						</div>
-
-						<div class="project-grid" id="projectGrid"></div>
-						<div class="project-empty" id="projectEmptyState" hidden>
-							No projects match the current filter.
-						</div>
-					</section>
-				</div>
-			</div>
-		</div>
-
-		<script src="assets/js/jquery.min.js?v=20260428e"></script>
-		<script src="assets/js/browser.min.js?v=20260428e"></script>
-		<script src="assets/js/breakpoints.min.js?v=20260428e"></script>
-		<script src="assets/js/util.js?v=20260428e"></script>
-		<script src="assets/js/main.js?v=20260428e"></script>
-		<script src="assets/js/projects-data.js?v=20260428e"></script>
-		<script src="assets/js/site.js?v=20260428e"></script>
-	</body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wuxinlin Cheng — AI Researcher & Engineer</title>
+  <meta name="description" content="Wuxinlin Cheng, Ph.D. AI researcher and engineer at KLA, connecting robust machine learning, computer vision, and mathematical foundations to real-world systems.">
+  <meta name="theme-color" content="#f6f5f0">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Wuxinlin Cheng — AI Researcher & Engineer">
+  <meta property="og:description" content="Reliable AI, from theory to practice. Explore selected work, publications, and the background behind the research.">
+  <meta property="og:url" content="https://chengwuxinlin.github.io/">
+  <link rel="canonical" href="https://chengwuxinlin.github.io/">
+  <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/ambient-field.css">
+  <script src="assets/js/site.js" defer></script>
+  <script src="assets/js/ambient-field.js" defer></script>
+</head>
+<body id="top">
+  <canvas id="ambient-field" aria-hidden="true"></canvas>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="#top" aria-label="Wuxinlin Cheng, home">
+        <span class="brand-monogram" aria-hidden="true">WC</span>
+        <span>Wuxinlin Cheng<span class="brand-degree">, Ph.D.</span></span>
+      </a>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a href="#work">Work</a><a href="#publications">Publications</a><a href="#about">About</a><a class="nav-contact" href="#contact">Let’s connect <svg class="icon icon-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v18m-7-7 7 7 7-7"/></svg></a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="small-line" aria-hidden="true"></span> AI researcher & engineer</p>
+        <h1 id="hero-title">Reliable AI,<br>from <em>theory</em><br>to practice.</h1>
+        <p class="hero-description">I’m Wuxinlin. I connect mathematical foundations with machine learning to build systems that are more robust, efficient, and useful in the real world.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#work">Explore my work <svg class="icon icon-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v18m-7-7 7 7 7-7"/></svg></a><a class="text-link" href="#publications">Read the research <svg class="icon icon-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v18m-7-7 7 7 7-7"/></svg></a></div>
+        <p class="current-role"><span class="status-dot" aria-hidden="true"></span> Currently at <strong>KLA</strong><span class="role-divider" aria-hidden="true">/</span> AI Algorithm Engineer</p>
+        <a class="service-teaser" href="#service">ICCAD 2026 <span>TPC member &amp; session chair</span> <svg class="icon icon-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v18m-7-7 7 7 7-7"/></svg></a>
+      </div>
+      <figure class="hero-figure">
+        <div class="figure-top"><span>STRUCTURE → LEARNING → SYSTEMS</span><span aria-hidden="true">[ 01 ]</span></div>
+        <img src="assets/images/research-field-v2.svg" width="620" height="520" alt="A shaded mathematical manifold with fine mesh, contour traces, and connected nodes around an ochre focal point." fetchpriority="high">
+        <figcaption><span>A mathematical lens.<br>A practical purpose.</span><span class="figure-note">A conceptual illustration of<br>the connections behind my work.</span></figcaption>
+      </figure>
+    </section>
+    <div class="focus-strip container" aria-label="Research focus">
+      <div><span class="index-label">01</span><p><strong>Robust learning</strong><span>Stability under changing conditions</span></p></div>
+      <div><span class="index-label">02</span><p><strong>Efficient intelligence</strong><span>Better use of models and data</span></p></div>
+      <div><span class="index-label">03</span><p><strong>Applied AI systems</strong><span>From industrial vision to avatars</span></p></div>
+    </div>
+    <section class="section container" id="work" aria-labelledby="work-title">
+      <span id="projects" class="anchor-alias" aria-hidden="true"></span>
+      <div class="section-heading"><div><p class="eyebrow">01 / Selected work</p><h2 id="work-title">Ideas, put to work.</h2></div><p>Research and engineering across model reliability,<br class="desktop-break"> industrial perception, and generative systems.</p></div>
+      <div class="work-toolbar" id="work-tools" hidden>
+        <div class="filter-group" role="group" aria-label="Filter selected work"><button type="button" data-filter="all" aria-pressed="true">All topics <span id="project-total"></span></button><button type="button" data-filter="research" aria-pressed="false">Research</button><button type="button" data-filter="industrial" aria-pressed="false">Industrial AI</button><button type="button" data-filter="generative" aria-pressed="false">Generative AI</button><button type="button" data-filter="systems" aria-pressed="false">ML systems</button></div>
+        <div class="search-row"><label class="project-search" for="project-search"><svg class="icon icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span class="sr-only">Search projects</span><input id="project-search" type="search" placeholder="Search projects or methods" autocomplete="off"></label><p class="result-count" id="work-count" role="status" aria-live="polite" aria-atomic="true"></p></div>
+      </div>
+      <div class="empty-results" id="empty-results" hidden><p>No projects match these filters.</p><button type="button" class="text-link" id="reset-projects">Clear search and filters</button></div>
+      <div class="work-grid">
+        <article class="work-card" data-category="industrial" id="work-vision">
+          <figure class="project-cover">
+            <a class="cover-link" href="assets/images/covers/wafer-segmentation.webp" target="_blank" rel="noopener noreferrer" aria-label="View larger cover: Tiny-particle wafer segmentation (opens in a new tab)">
+              <img src="assets/images/covers/wafer-segmentation.webp" width="1200" height="675" alt="Illustrated wafer particles and their corresponding segmentation masks, with matching locations and boundaries." loading="lazy" decoding="async">
+              <span class="cover-zoom" aria-hidden="true"><svg class="icon icon-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m8 0h5v-5"/></svg></span>
+            </a>
+            <figcaption><span>Image to particle mask</span><span class="cover-kind">Illustration</span></figcaption>
+          </figure>
+          <div class="work-body"><div class="work-meta"><span>Industrial AI</span><span>KLA · 2024–present</span></div><h3>Tiny-particle wafer segmentation</h3><p>Structure-aware segmentation for tiny-particle wafer inspection, bringing together boundary information, local complexity, and a compact student model.</p><div class="work-tags"><span>Computer vision</span><span>Knowledge distillation</span></div><details><summary>Inside the work <svg class="icon icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><div class="work-details"><p><strong>The challenge.</strong> Preserve fine structural detail while keeping a vision model compact enough for high-throughput inspection.</p><p><strong>The approach.</strong> A teacher–student pipeline that uses boundary salience, structural complexity, and local feature variation to guide learning.</p><p><strong>The result.</strong> A 7 percentage-point mIoU improvement to 80% in internal validation of the prototype.</p><p class="cover-source-note"><strong>About the cover.</strong> The cover illustrates image-to-mask segmentation; it is not a KLA inspection sample or model output.</p></div></details></div>
+        </article>
+        <article class="work-card" data-category="industrial generative" id="work-diffusion">
+          <figure class="project-cover">
+            <a class="cover-link" href="assets/images/covers/spectral-diffusion.webp" target="_blank" rel="noopener noreferrer" aria-label="View larger cover: Conditional diffusion for metrology (opens in a new tab)">
+              <img src="assets/images/covers/spectral-diffusion.webp" width="1200" height="675" alt="Random noise and conditioning inputs pass through a diffusion model to create illustrative spectral samples." loading="lazy" decoding="async">
+              <span class="cover-zoom" aria-hidden="true"><svg class="icon icon-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m8 0h5v-5"/></svg></span>
+            </a>
+            <figcaption><span>Noise to synthetic spectra</span><span class="cover-kind">Method illustration</span></figcaption>
+          </figure>
+          <div class="work-body"><div class="work-meta"><span>Industrial / Generative AI</span><span>KLA</span></div><h3>Conditional diffusion for metrology</h3><p>Conditional diffusion for spectral-data synthesis, exploring how generative modeling can improve metrology under distribution shift.</p><div class="work-tags"><span>Diffusion models</span><span>OOD robustness</span></div><details><summary>Inside the work <svg class="icon icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><div class="work-details"><p><strong>The challenge.</strong> Build more reliable multi-label regression models from noisy, high-dimensional physical measurements.</p><p><strong>The approach.</strong> Synthesize spectral data with conditional diffusion and evaluate both in-distribution and out-of-distribution behavior.</p><p><strong>The context.</strong> Industry research at KLA. The implementation and internal evaluation data are not shared here.</p><p class="cover-source-note"><strong>About the cover.</strong> The signals illustrate conditional generation. They are not industrial measurements or model evaluation results.</p></div></details></div>
+        </article>
+        <article class="work-card" data-category="research" id="work-cirstag">
+          <figure class="project-cover">
+            <a class="cover-link" href="assets/images/covers/cirstag.webp" target="_blank" rel="noopener noreferrer" aria-label="View larger cover: CirSTAG: circuit-model sensitivity (opens in a new tab)">
+              <img src="assets/images/covers/cirstag.webp" width="1200" height="675" alt="A circuit schematic with sensitive pins highlighted, beside a published DES comparison of predicted delay changes." loading="lazy" decoding="async">
+              <span class="cover-zoom" aria-hidden="true"><svg class="icon icon-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m8 0h5v-5"/></svg></span>
+            </a>
+            <figcaption><span>CirSTAG / DES benchmark</span><span class="cover-kind">Published data</span></figcaption>
+          </figure>
+          <div class="work-body"><div class="work-meta"><span>Research</span><span>DAC 2025</span></div><h3>CirSTAG: circuit-model sensitivity</h3><p>CirSTAG studies circuit-model stability on graph-based manifolds, connecting spectral methods with the behavior of graph neural networks.</p><div class="work-tags"><span>Graph learning</span><span class="award-tag">Best Paper Nominee</span></div><details><summary>Inside the work <svg class="icon icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><div class="work-details"><p><strong>The question.</strong> How can we understand and improve the stability of learned models for circuit design?</p><p><strong>The approach.</strong> Analyze input and output graph-based manifolds to identify sensitive circuit elements under changes in graph structure and node features.</p><p><strong>The outcome.</strong> First-author research at DAC 2025, selected as a Best Paper Nominee.</p><a class="text-link" href="https://doi.org/10.1109/DAC63849.2025.11132637" target="_blank" rel="noopener noreferrer">Read CirSTAG <svg class="icon icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3h7v7M21 3l-11 11M10 3H3v18h18v-7"/></svg></a><p class="cover-source-note"><strong>About the cover.</strong> The circuit is schematic. The DES bars replot Table I of CirSTAG: mean relative change in GNN-predicted arrival time, with 10% of nodes perturbed and pin capacitance scaled by 10. Stable: 0.0068%; sensitive: 0.5211%.</p></div></details></div>
+        </article>
+        <article class="work-card" data-category="research" id="work-spade">
+          <figure class="project-cover">
+            <a class="cover-link" href="assets/images/covers/spade.webp" target="_blank" rel="noopener noreferrer" aria-label="View larger cover: SPADE: black-box robustness (opens in a new tab)">
+              <img src="assets/images/covers/spade.webp" width="1200" height="675" alt="Handwritten digit examples from the SPADE project figure pass through a schematic sensitivity analysis to identify fragile samples." loading="lazy" decoding="async">
+              <span class="cover-zoom" aria-hidden="true"><svg class="icon icon-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m8 0h5v-5"/></svg></span>
+            </a>
+            <figcaption><span>SPADE / handwritten digits</span><span class="cover-kind">Source examples</span></figcaption>
+          </figure>
+          <div class="work-body"><div class="work-meta"><span>Research</span><span>ICML 2021</span></div><h3>SPADE: black-box robustness</h3><p>SPADE evaluates black-box adversarial robustness through the relationship between input and output graph manifolds.</p><div class="work-tags"><span>Spectral methods</span><span>Adversarial robustness</span></div><details><summary>Inside the work <svg class="icon icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><div class="work-details"><p><strong>The question.</strong> How can we assess model and sample sensitivity without relying on access to a model’s internal gradients?</p><p><strong>The approach.</strong> Use a spectral graph-based measure to study local input–output behavior and inform robustness evaluation and adversarial training.</p><a class="text-link" href="https://proceedings.mlr.press/v139/cheng21a.html" target="_blank" rel="noopener noreferrer">Read SPADE <svg class="icon icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3h7v7M21 3l-11 11M10 3H3v18h18v-7"/></svg></a><p class="cover-source-note"><strong>About the cover.</strong> The digit tiles come from the original SPADE project figure. The connecting graph illustrates the method; it does not assign new numerical scores or show clean/adversarial image pairs.</p></div></details></div>
+        </article>
+        <article class="work-card" data-category="research" id="work-salman">
+          <figure class="project-cover">
+            <a class="cover-link" href="assets/images/covers/salman.webp" target="_blank" rel="noopener noreferrer" aria-label="View larger cover: SALMAN: language-model stability (opens in a new tab)">
+              <img src="assets/images/covers/salman.webp" width="1200" height="675" alt="Illustrative text variants pass through a language model into a graph comparison that highlights a sensitive relationship." loading="lazy" decoding="async">
+              <span class="cover-zoom" aria-hidden="true"><svg class="icon icon-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m8 0h5v-5"/></svg></span>
+            </a>
+            <figcaption><span>SALMAN / language-model stability</span><span class="cover-kind">Method illustration</span></figcaption>
+          </figure>
+          <div class="work-body"><div class="work-meta"><span>Research</span><span>Preprint · 2025</span></div><h3>SALMAN: language-model stability</h3><p>A graph-manifold approach to finding language-model inputs whose small changes can produce unstable output behavior.</p><div class="work-tags"><span>Language models</span><span>Robustness evaluation</span></div><details><summary>Inside the work <svg class="icon icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><div class="work-details"><p><strong>The question.</strong> Which text samples are most sensitive to perturbations?</p><p><strong>The approach.</strong> Compare input and output relationships using Distance Mapping Distortion, then use sample-level stability to guide robustness evaluation and training.</p><p><strong>The status.</strong> Research preprint; first author.</p><a class="text-link" href="https://arxiv.org/abs/2508.18306" target="_blank" rel="noopener noreferrer">Read the preprint <svg class="icon icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3h7v7M21 3l-11 11M10 3H3v18h18v-7"/></svg></a><p class="cover-source-note"><strong>About the cover.</strong> A conceptual view of input–output relationship distortion, not actual model responses or measured stability scores.</p></div></details></div>
+        </article>
+        <article class="work-card" data-category="research" id="work-sagman">
+          <figure class="project-cover">
+            <a class="cover-link" href="assets/images/covers/sagman.webp" target="_blank" rel="noopener noreferrer" aria-label="View larger cover: SAGMAN: graph-model stability (opens in a new tab)">
+              <img src="assets/images/covers/sagman.webp" width="1200" height="675" alt="Corresponding graph neighborhoods show an edge change and an altered output relationship, highlighting sensitivity in a graph neural network." loading="lazy" decoding="async">
+              <span class="cover-zoom" aria-hidden="true"><svg class="icon icon-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m8 0h5v-5"/></svg></span>
+            </a>
+            <figcaption><span>SAGMAN / graph-model stability</span><span class="cover-kind">Method illustration</span></figcaption>
+          </figure>
+          <div class="work-body"><div class="work-meta"><span>Research</span><span>Preprint · 2024</span></div><h3>SAGMAN: graph-model stability</h3><p>Spectral analysis of how graph neural networks transform relationships between nodes, revealing sensitivity to changes in edges and features.</p><div class="work-tags"><span>Graph neural networks</span><span>Spectral methods</span></div><details><summary>Inside the work <svg class="icon icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><div class="work-details"><p><strong>The question.</strong> Which graph nodes become unstable when connections or features change?</p><p><strong>The approach.</strong> Build distance-preserving graph-based manifolds with spectral embeddings and probabilistic graphical models, then analyze distortion between model input and output.</p><p><strong>The status.</strong> Research preprint; first author. Applications include GNN stability, recommendation models, and robustness research.</p><a class="text-link" href="https://arxiv.org/abs/2402.08653" target="_blank" rel="noopener noreferrer">Read the preprint <svg class="icon icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3h7v7M21 3l-11 11M10 3H3v18h18v-7"/></svg></a><p class="cover-source-note"><strong>About the cover.</strong> A conceptual graph perturbation and mapping. Highlighted connections illustrate sensitivity; they are not a measured benchmark result.</p></div></details></div>
+        </article>
+        <article class="work-card" data-category="research" id="work-sgm">
+          <figure class="project-cover">
+            <a class="cover-link" href="assets/images/covers/sgm-pinn.webp" target="_blank" rel="noopener noreferrer" aria-label="View larger cover: SGM-PINN: efficient physics learning (opens in a new tab)">
+              <img src="assets/images/covers/sgm-pinn.webp" width="1200" height="675" alt="Sampling a flow domain around an obstacle, followed by an actual absolute-pressure-error field from the SGM-PINN paper." loading="lazy" decoding="async">
+              <span class="cover-zoom" aria-hidden="true"><svg class="icon icon-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m8 0h5v-5"/></svg></span>
+            </a>
+            <figcaption><span>SGM-PINN / fluid simulation</span><span class="cover-kind">Paper result</span></figcaption>
+          </figure>
+          <div class="work-body"><div class="work-meta"><span>Research</span><span>DAC 2024</span></div><h3>SGM-PINN: efficient physics learning</h3><p>SGM-PINN uses sampling graphical models to make training physics-informed neural networks more efficient.</p><div class="work-tags"><span>Scientific ML</span><span>Training efficiency</span></div><details><summary>Inside the work <svg class="icon icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><div class="work-details"><p><strong>The question.</strong> Can a model learn the relevant physics while spending less time on redundant training samples?</p><p><strong>The approach.</strong> Graph-based importance sampling for PINNs, studied on computational fluid dynamics workloads.</p><p><strong>My contribution.</strong> Co-author on the DAC 2024 publication.</p><a class="text-link" href="https://arxiv.org/abs/2407.07358" target="_blank" rel="noopener noreferrer">Read SGM-PINN <svg class="icon icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3h7v7M21 3l-11 11M10 3H3v18h18v-7"/></svg></a><p class="cover-source-note"><strong>About the cover.</strong> Sampling locations are illustrative. The pressure-error panel is adapted from <a href="https://arxiv.org/html/2407.07358v1" target="_blank" rel="noopener noreferrer">Anticev, Aghdaei, Cheng &amp; Feng, SGM-PINN, Figure 4</a>; its field colors and color scale are preserved. This adapted cover is licensed <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-SA 4.0</a>.</p></div></details></div>
+        </article>
+        <article class="work-card" data-category="industrial" id="work-copper">
+          <figure class="project-cover">
+            <a class="cover-link" href="assets/images/covers/copper-dishing.webp" target="_blank" rel="noopener noreferrer" aria-label="View larger cover: Learning to measure copper dishing (opens in a new tab)">
+              <img src="assets/images/covers/copper-dishing.webp" width="1200" height="675" alt="A conceptual copper cross-section shows a recessed surface and a dishing-depth measurement, connected to an ML estimation workflow." loading="lazy" decoding="async">
+              <span class="cover-zoom" aria-hidden="true"><svg class="icon icon-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m8 0h5v-5"/></svg></span>
+            </a>
+            <figcaption><span>Copper dishing / learning to measure</span><span class="cover-kind">Method illustration</span></figcaption>
+          </figure>
+          <div class="work-body"><div class="work-meta"><span>Industrial AI</span><span>SPIE presentation · 2026</span></div><h3>Learning to measure copper dishing</h3><p>Machine learning for Cu dishing metrology in advanced packaging, connecting semiconductor measurements with data-driven estimation.</p><div class="work-tags"><span>Semiconductor metrology</span><span>Applied ML</span></div><details><summary>Inside the work <svg class="icon icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><div class="work-details"><p><strong>The work.</strong> Developed ML methods for semiconductor metrology and advanced packaging at KLA.</p><p><strong>The presentation.</strong> Machine-Learning Solution for Cu Dishing Metrology in Advanced Packaging, SPIE Advanced Lithography + Patterning 2026.</p><p><strong>The context.</strong> Industry research; proprietary implementation and evaluation data are not shared here.</p><p class="cover-source-note"><strong>About the cover.</strong> A schematic cross-section and measurement workflow. Geometry is conceptual, with no measured dimensions or proprietary sample data.</p></div></details></div>
+        </article>
+        <article class="work-card" data-category="generative" id="work-avatars">
+          <figure class="project-cover">
+            <a class="cover-link" href="assets/images/covers/avatars.webp" target="_blank" rel="noopener noreferrer" aria-label="View larger cover: RITA: real-time talking avatars (opens in a new tab)">
+              <img src="assets/images/covers/avatars.webp" width="1200" height="675" alt="Three actual talking-avatar demo frames show the same character with changing mouth and facial expressions." loading="lazy" decoding="async">
+              <span class="cover-zoom" aria-hidden="true"><svg class="icon icon-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m8 0h5v-5"/></svg></span>
+            </a>
+            <figcaption><span>RITA / talking-avatar demo</span><span class="cover-kind">Actual demo frames</span></figcaption>
+          </figure>
+          <div class="work-body"><div class="work-meta"><span>Generative AI</span><span>CVPR 2024 demo</span></div><h3>RITA: real-time talking avatars</h3><p>Real-time talking avatars that connect facial reconstruction, speech synthesis, lip synchronization, and interactive dialogue.</p><div class="work-tags"><span>Multimodal systems</span><span>Real-time inference</span></div><details><summary>Inside the work <svg class="icon icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><div class="work-details"><p><strong>The work.</strong> As a scientific advisor and AI-lab lead, I worked on 3D avatar assistants combining visual, speech, emotion, and language components.</p><p><strong>The demonstration.</strong> Co-developed RITA, a real-time interactive talking-avatar framework demonstrated at CVPR 2024.</p><a class="text-link" href="https://media.eventhosts.cc/Conferences/CVPR2024/CVPR_main_conf_2024.pdf" target="_blank" rel="noopener noreferrer">View the CVPR demo program (PDF) <svg class="icon icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3h7v7M21 3l-11 11M10 3H3v18h18v-7"/></svg></a><p class="cover-source-note"><strong>About the cover.</strong> The cover uses actual output frames at 0.0, 1.0, and 3.0 seconds from the <a href="https://drive.google.com/file/d/1HsqRwAYIS7WWpbNsqjjuBPfROzYh0opo/view" target="_blank" rel="noopener noreferrer">project demo</a>. These are not input portraits.</p></div></details></div>
+        </article>
+        <article class="work-card" data-category="industrial" id="work-vials">
+          <figure class="project-cover">
+            <a class="cover-link" href="assets/images/covers/vial-inspection.webp" target="_blank" rel="noopener noreferrer" aria-label="View larger cover: Efficient vial inspection (opens in a new tab)">
+              <img src="assets/images/covers/vial-inspection.webp" width="1200" height="675" alt="Actual vial inspection images show negative and positive source examples, with original annotations retained." loading="lazy" decoding="async">
+              <span class="cover-zoom" aria-hidden="true"><svg class="icon icon-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m8 0h5v-5"/></svg></span>
+            </a>
+            <figcaption><span>Vial classification / inspection examples</span><span class="cover-kind">Source examples</span></figcaption>
+          </figure>
+          <div class="work-body"><div class="work-meta"><span>Industrial AI</span><span>LEMA · 2021–2023</span></div><h3>Efficient vial inspection</h3><p>Industrial vial classification that brings together data curation, model pruning, and robust training to improve inspection quality and throughput.</p><div class="work-tags"><span>Computer vision</span><span>Model compression</span></div><details><summary>Inside the work <svg class="icon icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><div class="work-details"><p><strong>The challenge.</strong> Improve classification while reducing inference cost in an industrial inspection pipeline.</p><p><strong>The approach.</strong> Curate the training data, prune the network, and strengthen training against perturbations.</p><p><strong>The result.</strong> A 42% relative accuracy improvement over the prior model and a 5.8× inference speedup in internal evaluation.</p><p class="cover-source-note"><strong>About the cover.</strong> The negative and positive examples come from the original LEMA project figure. Boxes and arrows are source annotations; these are not before-and-after model outputs.</p></div></details></div>
+        </article>
+        <article class="work-card" data-category="industrial" id="work-hair">
+          <figure class="project-cover">
+            <a class="cover-link" href="assets/images/covers/hair-detection.webp" target="_blank" rel="noopener noreferrer" aria-label="View larger cover: Finding fine contaminants (opens in a new tab)">
+              <img src="assets/images/covers/hair-detection.webp" width="1200" height="675" alt="An actual material-inspection image and an enlarged crop reveal the same fine hair-like contaminant inside its original annotation." loading="lazy" decoding="async">
+              <span class="cover-zoom" aria-hidden="true"><svg class="icon icon-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m8 0h5v-5"/></svg></span>
+            </a>
+            <figcaption><span>Hair detection / overview and detail</span><span class="cover-kind">Source example</span></figcaption>
+          </figure>
+          <div class="work-body"><div class="work-meta"><span>Industrial AI</span><span>LEMA · 2021–2023</span></div><h3>Finding fine contaminants</h3><p>Hair detection in visually complex inspection images, with an emphasis on learning from limited data and maintaining reliability under image corruption.</p><div class="work-tags"><span>Small-data learning</span><span>Robust vision</span></div><details><summary>Inside the work <svg class="icon icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><div class="work-details"><p><strong>The challenge.</strong> Detect fine hair-like contaminants against complex material textures.</p><p><strong>The approach.</strong> Robust training and augmentation, evaluated on a small internal dataset and severity-5 image corruptions.</p><p><strong>The context.</strong> Scientific advisory work on industrial computer vision at LEMA.</p><p class="cover-source-note"><strong>About the cover.</strong> The overview and magnified detail use the same original inspection image. The red box is a source annotation, not a new prediction.</p></div></details></div>
+        </article>
+        <article class="work-card" data-category="research systems" id="work-forecasting">
+          <figure class="project-cover">
+            <a class="cover-link" href="assets/images/covers/forecasting.webp" target="_blank" rel="noopener noreferrer" aria-label="View larger cover: Forecasting with calibrated uncertainty (opens in a new tab)">
+              <img src="assets/images/covers/forecasting.webp" width="1200" height="675" alt="A conceptual pipeline separates historical observations at a forecast cutoff, combines specialist estimates, and produces a calibrated forecast." loading="lazy" decoding="async">
+              <span class="cover-zoom" aria-hidden="true"><svg class="icon icon-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m8 0h5v-5"/></svg></span>
+            </a>
+            <figcaption><span>Past observations to calibrated forecasts</span><span class="cover-kind">Method illustration</span></figcaption>
+          </figure>
+          <div class="work-body"><div class="work-meta"><span>ML systems</span><span>Independent research · 2026</span></div><h3>Forecasting with calibrated uncertainty</h3><p>A point-in-time forecasting and model-comparison system that combines specialist predictions, calibrated probabilities, and tests of ranking stability.</p><div class="work-tags"><span>Probabilistic forecasting</span><span>Model evaluation</span></div><details><summary>Inside the work <svg class="icon icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><div class="work-details"><p><strong>The question.</strong> How should models be compared when predictions arrive at different times and evidence is incomplete?</p><p><strong>The approach.</strong> Split data by label-resolution date, combine specialist models with contextual log-opinion pooling, calibrate outputs, and compare matched forecasts with Bradley–Terry/Elo rankings.</p><p><strong>The scope.</strong> Independent research using daily equity data, reproducible artifacts, and offline evaluation.</p><p class="cover-source-note"><strong>About the cover.</strong> A conceptual forecasting workflow. The drawn observations and forecast are illustrative, not measured predictions, performance results, or investment returns.</p></div></details></div>
+        </article>
+      </div>
+    </section>
+    <section class="publications-section" id="publications" aria-labelledby="publications-title">
+      <div class="container section">
+        <div class="section-heading"><div><p class="eyebrow">02 / Publications & presentations</p><h2 id="publications-title">The research behind the work.</h2></div><p>Selected contributions to machine learning,<br class="desktop-break"> design automation, and applied AI.</p></div>
+        <ol class="publication-list">
+          <li><span class="publication-year">2026</span><div class="publication-body"><div class="publication-meta"><span>SPIE Advanced Lithography + Patterning</span><span class="type-label">Presentation</span></div><h3>Machine-Learning Solution for Cu Dishing Metrology in Advanced Packaging</h3><p>Semiconductor metrology · Conference presentation</p></div><span class="publication-end">Industry research</span></li>
+          <li><span class="publication-year">2025</span><div class="publication-body"><div class="publication-meta"><span>DAC</span><span class="type-label award-tag">Best Paper Nominee</span></div><h3><a href="https://doi.org/10.1109/DAC63849.2025.11132637" target="_blank" rel="noopener noreferrer">CirSTAG: Circuit Stability Analysis on Graph-based Manifolds <svg class="icon icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3h7v7M21 3l-11 11M10 3H3v18h18v-7"/></svg></a></h3><p>First author · Graph learning & stability</p></div><a class="publication-end" href="https://www.csl.cornell.edu/~zhiruz/pdfs/cirstag-dac2025.pdf" target="_blank" rel="noopener noreferrer" aria-label="Read CirSTAG paper (PDF, opens in new tab)">Paper (PDF) <svg class="icon icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3h7v7M21 3l-11 11M10 3H3v18h18v-7"/></svg></a></li>
+          <li><span class="publication-year">2024</span><div class="publication-body"><div class="publication-meta"><span>DAC</span><span class="type-label">Paper</span></div><h3><a href="https://doi.org/10.1145/3649329.3656521" target="_blank" rel="noopener noreferrer">SGM-PINN: Sampling Graphical Models for Faster Training of Physics-Informed Neural Networks <svg class="icon icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3h7v7M21 3l-11 11M10 3H3v18h18v-7"/></svg></a></h3><p>Co-author · Scientific machine learning</p></div><a class="publication-end" href="https://arxiv.org/abs/2407.07358" target="_blank" rel="noopener noreferrer" aria-label="Read SGM-PINN on arXiv (opens in new tab)">arXiv <svg class="icon icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3h7v7M21 3l-11 11M10 3H3v18h18v-7"/></svg></a></li>
+          <li><span class="publication-year">2024</span><div class="publication-body"><div class="publication-meta"><span>CVPR</span><span class="type-label">Demo</span></div><h3>RITA: A Real-Time Interactive Talking Avatars Framework</h3><p>Co-developer · Multimodal generative systems</p></div><a class="publication-end" href="https://media.eventhosts.cc/Conferences/CVPR2024/CVPR_main_conf_2024.pdf" target="_blank" rel="noopener noreferrer" aria-label="View RITA in the CVPR demo program (PDF, opens in new tab)">Program (PDF) <svg class="icon icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3h7v7M21 3l-11 11M10 3H3v18h18v-7"/></svg></a></li>
+          <li><span class="publication-year">2021</span><div class="publication-body"><div class="publication-meta"><span>ICML</span><span class="type-label">Paper</span></div><h3><a href="https://proceedings.mlr.press/v139/cheng21a.html" target="_blank" rel="noopener noreferrer">SPADE: A Spectral Method for Black-Box Adversarial Robustness Evaluation <svg class="icon icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3h7v7M21 3l-11 11M10 3H3v18h18v-7"/></svg></a></h3><p>Co-first author · Adversarial robustness</p></div><a class="publication-end" href="https://proceedings.mlr.press/v139/cheng21a.html" target="_blank" rel="noopener noreferrer" aria-label="Read SPADE in the ICML proceedings (opens in new tab)">Proceedings <svg class="icon icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3h7v7M21 3l-11 11M10 3H3v18h18v-7"/></svg></a></li>
+        </ol>
+      </div>
+    </section>
+    <section class="section container about-section" id="about" aria-labelledby="about-title">
+      <div class="about-intro"><div><p class="eyebrow">03 / A little background</p><h2 id="about-title">A researcher’s curiosity.<br>An engineer’s mindset.</h2></div><div class="about-story"><p>I’m an AI researcher and engineer with a Ph.D. in Computer Engineering from Stevens Institute of Technology. My work bridges the mathematical foundations of machine learning and the demands of real systems.</p><p>At KLA, I develop AI for semiconductor metrology and inspection. Previously, I researched adversarial robustness and graph learning at Stevens, advised industrial vision teams, and led an AI lab building interactive avatar systems.</p><p class="about-principle">The thread through it all: understand why a model works, where it fails, and how to make it useful.</p></div></div>
+      <div class="background-grid">
+        <figure class="portrait"><img src="images/pic10.jpg" alt="Wuxinlin Cheng standing outdoors in front of a castle." width="2930" height="2070" loading="lazy"><figcaption><span>Wuxinlin Cheng</span><span>Researcher. Engineer. Always curious.</span></figcaption></figure>
+        <div class="experience"><h3 class="small-heading">Along the way</h3><ol class="timeline"><li><span class="timeline-period">2024–present</span><div><h4>KLA Corporation</h4><p>AI Algorithm Engineer, Deep Learning</p><span>Semiconductor metrology & inspection</span></div></li><li><span class="timeline-period">2020–2025</span><div><h4>Stevens Institute of Technology</h4><p>Research Assistant</p><span>Adversarial robustness & graph learning</span></div></li><li><span class="timeline-period">2023–2024</span><div><h4>Stealth Startup</h4><p>Scientific Advisor & AI Lab Lead</p><span>Multimodal avatars · Concurrent with Ph.D.</span></div></li><li><span class="timeline-period">2021–2023</span><div><h4>LEMA Technology</h4><p>Scientific Advisor</p><span>Industrial computer vision · Concurrent with Ph.D.</span></div></li></ol></div>
+      </div>
+      <section class="service-panel" id="service" aria-labelledby="service-title">
+        <div class="service-heading"><p class="eyebrow">Professional service / 2026</p><h3 id="service-title">ICCAD 2026</h3><p>International Conference on Computer-Aided Design</p></div>
+        <div class="service-roles"><div><h4>Invited Technical Program Committee (TPC) Member</h4><p>AI Algorithms and Applications track</p></div><div><h4>Session Chair</h4><p>Chairing two sessions:</p><ul><li>Foundation Model Benchmarks</li><li>Trustworthy AI for Hardware Design</li></ul></div></div>
+      </section>
+      <div class="credentials-grid">
+        <div><h3 class="small-heading">Foundations</h3><ul class="education-list"><li><strong>Ph.D., Computer Engineering</strong><span>Stevens Institute of Technology · 2025</span></li><li><strong>M.Eng., Computer Engineering</strong><span>Stevens Institute of Technology · 2020</span></li><li><strong>B.Eng., Electrical Engineering</strong><span>Sichuan University · 2018</span></li></ul></div>
+        <div><h3 class="small-heading">Recognition & service</h3><ul class="recognition-list"><li><span>2026</span><p>Global top-three winning team & challenge-track winner<small>KLA CY26 AI/Algorithm Hackathon</small></p></li><li><span>2025</span><p>Outstanding Ph.D. Dissertation Award<small>Computer Engineering · Stevens Institute of Technology</small></p></li><li><span>Service</span><p>ICLR 2026 reviewer</p></li><li><span>Invention</span><p>Named inventor on two KLA internal invention disclosures</p></li></ul></div>
+      </div>
+      <div class="toolkit"><span class="small-heading">Tools I work with</span><p>Python <span>/</span> C++ <span>/</span> PyTorch <span>/</span> TensorFlow <span>/</span> Scientific computing</p></div>
+    </section>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-inner"><div><p class="eyebrow">04 / Let’s connect</p><h2 id="contact-title">Good work starts<br>with a conversation.</h2><p>For research collaborations, applied AI opportunities,<br class="desktop-break"> or a thoughtful exchange of ideas.</p></div><div class="contact-links"><a class="email-link" href="mailto:chengwu1230@gmail.com">chengwu1230@gmail.com <svg class="icon icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 6 9 7 9-7"/></svg></a><div class="social-links"><a href="https://github.com/chengwuxinlin" target="_blank" rel="noopener noreferrer">GitHub <svg class="icon icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3h7v7M21 3l-11 11M10 3H3v18h18v-7"/></svg></a><a href="https://www.linkedin.com/in/wuxinlin-cheng-79668a114/" target="_blank" rel="noopener noreferrer">LinkedIn <svg class="icon icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3h7v7M21 3l-11 11M10 3H3v18h18v-7"/></svg></a></div></div></div></section>
+  </main>
+  <dialog id="cover-viewer" aria-labelledby="cover-viewer-title" aria-describedby="cover-viewer-caption">
+    <div class="viewer-header"><h2 id="cover-viewer-title">Project cover</h2><button type="button" autofocus>Close image <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M6 18 18 6"/></svg></button></div>
+    <img src="assets/images/covers/wafer-segmentation.webp" width="1200" height="675" alt="Project cover, enlarged." loading="lazy">
+    <p id="cover-viewer-caption"></p>
+  </dialog>
+  <footer class="site-footer container"><p>© 2026 Wuxinlin Cheng</p><button id="motion-toggle" type="button" hidden><span id="motion-label">Pause background motion</span></button><a href="#top">Back to top <svg class="icon icon-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 3h16M12 21V7m-6 6 6-6 6 6"/></svg></a></footer>
+</body>
 </html>
